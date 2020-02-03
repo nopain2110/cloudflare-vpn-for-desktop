@@ -12,5 +12,6 @@ echo -e "=====wgcf-identity.json=====\n"; cat configs/wgcf-identity.json; \
 echo -e "=============================\n"; \
 docker run --rm -d -p 80:80 -v `pwd`/configs:/usr/local/apache2/htdocs/ httpd; \
 rm configs/register.py; \
-id=$(cat configs/wgcf-identity.json | grep 'account_id' | sed 's/ *//g' | tr -d ',"account_id:'); \
+id=$(cat configs/wgcf-identity.json | grep 'account_id' | tr -d ',":' | sed 's/ *//g' | sed 's/account_id//
+g'); \
 ./boost.sh "$id"
