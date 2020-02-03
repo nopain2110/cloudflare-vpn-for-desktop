@@ -6,9 +6,11 @@
 mkdir -p configs; cp register.py configs/; \
 docker run --rm -i -v `pwd`/configs:/root -w /root ubuntu:devel sh -c '\
 apt update; apt install -y wireguard python3-pip; \
-pip3 install requests; python3 register.py'; \
-echo "=====wgcf-profile.conf=====\n"; cat configs/wgcf-profile.conf; \
-echo "=====wgcf-identity.json=====\n"; cat configs/wgcf-identity.json; \
-echo "=============================\n"; \
+pip3 install requests; python3 register.py'; clear; \
+echo -e "=====wgcf-profile.conf=====\n"; cat configs/wgcf-profile.conf; \
+echo -e "=====wgcf-identity.json=====\n"; cat configs/wgcf-identity.json; \
+echo -e "=============================\n"; \
 docker run --rm -d -p 80:80 -v `pwd`/configs:/usr/local/apache2/htdocs/ httpd; \
-rm configs/register.py;
+rm configs/register.py; \
+id=$(cat configs/wgcf-identity.json | grep 'account_id' | sed 's/ *//g' | tr -d ',"account_id:'); \
+./boost.sh "$id"
