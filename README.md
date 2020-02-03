@@ -10,3 +10,6 @@ This repository is to help you with installing CloudFlare VPN (1.1.1.1) on your 
 
 4. Once the script finished generating the config files, access the link via port 80 *highlighted once finished* and download 2 files *wgcf-identity.json* and *wgcf-profile.conf* to your PC. 
 5. Last step, import the *wgcf-profile.conf* config file to Wireguard and enjoy your VPN
+
+
+## If you need further support, you can drop me a message via http://fb.com/gr219
