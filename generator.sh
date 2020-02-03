@@ -3,7 +3,7 @@
 # Scripted by Tuyen Tran
 # http://fb.com/gr219
 # -------------------
-mkdir -p configs; cp register.py ./configs \
+mkdir -p configs; cp register.py configs/ \
 docker run --rm -i -v `pwd`/configs:/root -w /root ubuntu:devel sh -c '\
 apt update; apt install -y wireguard python3-pip; \
 wg genkey > privatekey; wg pubkey < privatekey > publickey; \
