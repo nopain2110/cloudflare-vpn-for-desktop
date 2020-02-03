@@ -165,11 +165,6 @@ if __name__ == "__main__":
 
 
 	if not identity_path.exists():
-		print("This project is in no way affiliated with Cloudflare!")
-		print(f"Cloudflare's Terms of Service: {terms_of_service_url}")
-		if not input("Do you agree? (y/N): ").lower() == "y":
-			sys.exit(2)
-
 		print(f"Creating new identity...")
 		account_data = do_register()
 		save_identitiy(account_data)
