@@ -2,6 +2,10 @@
 ![Screen-Shot-2020-02-03-at-15.46.48.png](https://www.upsieutoc.com/images/2020/02/03/Screen-Shot-2020-02-03-at-15.46.48.png)
 
 This repository is to help you with installing CloudFlare VPN (1.1.1.1) on your Desktop(Windows, MacOSX, Ubuntu...)
+
+### Detail instruction with Youtube video
+[![How to use Cloudflare 1.1.1.1 WARP+ VPN on Desktop](http://img.youtube.com/vi/aOT5ZMsuNU0/0.jpg)](http://www.youtube.com/watch?v=aOT5ZMsuNU0 "How to use Cloudflare 1.1.1.1 WARP+ VPN on Desktop")
+
 ### Please follow steps below to get stuffs done
 
 1. Install Wireguard on your OS. You can easily get it from here https://www.wireguard.com/install/
