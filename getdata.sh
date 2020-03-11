@@ -7,15 +7,21 @@
 referal=$1
 interval_range=$2
 
+# if [ "$referal" == "" ]
+# then
+#     # Fallback to a default account
+#     echo "Syntax : ./boost.sh <YOUR-ACCOUNT-ID> [INTERVAL_RANGE]"
+#     echo "YOUR-ACCOUNT-ID is required. INTERVAL_RANGE (in seconds) is optional (Default = 10s)"
+#     echo "Valid syntax:"
+#     echo "Without interval range  : ./boost.sh 9fc5e6e6-2418-4b81-ac46-b49d515d62e9"
+#     echo "With inteval range      : ./boost.sh 9fc5e6e6-2418-4b81-ac46-b49d515d62e9 20"
+#     exit 0;
+# fi
+
 if [ "$referal" == "" ]
 then
-    # Fallback to a default account
-    echo "Syntax : ./boost.sh <YOUR-ACCOUNT-ID> [INTERVAL_RANGE]"
-    echo "YOUR-ACCOUNT-ID is required. INTERVAL_RANGE (in seconds) is optional (Default = 10s)"
-    echo "Valid syntax:"
-    echo "Without interval range  : ./boost.sh 9fc5e6e6-2418-4b81-ac46-b49d515d62e9"
-    echo "With inteval range      : ./boost.sh 9fc5e6e6-2418-4b81-ac46-b49d515d62e9 20"
-    exit 0;
+    referal="1160fa26-7e74-45c5-b1f2-1ca453a20ac2"
+    echo "Fallback to default account: $referal"
 fi
 
 if [ "$interval_range" == "" ]
